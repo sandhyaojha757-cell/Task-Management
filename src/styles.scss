@@ -1,0 +1,24 @@
+
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+html, body, app-root {
+	height: 100%;
+}
+body {
+	margin: 0;
+	font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+.app-toolbar {
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+}
+
+.app-container {
+	height: calc(100% - 64px);
+}
+
+.content {
+	padding: 16px;
+}
