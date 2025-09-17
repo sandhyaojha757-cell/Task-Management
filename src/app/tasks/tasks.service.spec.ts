@@ -61,7 +61,7 @@ describe('TasksService', () => {
   it('should update a task via PUT', () => {
     const updatedTask: Task = { id: 1, title: 'Updated Task', description: 'Updated Desc', status: 'In Progress', priority: 'High' };
 
-    service.updateTask(updatedTask.id!, updatedTask).subscribe(task => {
+    service.updateTask(updatedTask.id!.toString(), updatedTask).subscribe(task => {
       expect(task).toEqual(updatedTask);
     });
 
@@ -86,7 +86,7 @@ describe('TasksService', () => {
   it('should get a single task by id via GET', () => {
     const mockTask: Task = { id: 1, title: 'Test Task 1', description: 'Description 1', status: 'Pending', priority: 'Low' };
 
-    service.getTask(1).subscribe(task => {
+    service.getTask(1..toString()).subscribe(task => {
       expect(task).toEqual(mockTask);
     });
 
