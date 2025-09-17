@@ -15,6 +15,6 @@ export const appConfig: ApplicationConfig = {
     provideClientHydration(withEventReplay()),
     provideHttpClient(withInterceptors([loadingInterceptor, errorInterceptor])),
     provideAnimations(),
-    
+    provideZoneChangeDetection({ eventCoalescing: true })
   ],
 };

@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 
 import { TasksListComponent } from './tasks-list.component';
 import { TasksService } from '../tasks.service';
+import { provideZonelessChangeDetection } from '@angular/core';
 
 describe('TasksListComponent', () => {
   let component: TasksListComponent;
@@ -32,6 +33,7 @@ describe('TasksListComponent', () => {
       imports: [TasksListComponent],
       providers: [
         provideHttpClient(),
+        provideZonelessChangeDetection(),
         provideNoopAnimations(),
         { provide: TasksService, useValue: mockTasksService },
         { provide: Router, useValue: mockRouter },

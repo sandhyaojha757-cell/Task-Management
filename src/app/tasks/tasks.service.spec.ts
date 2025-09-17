@@ -4,6 +4,7 @@ import { HttpClientTestingModule, HttpTestingController } from '@angular/common/
 import { TasksService } from './tasks.service';
 import { Task, TaskStatus } from './task.model';
 import { environment } from '../../environments/environment';
+import { provideZonelessChangeDetection } from '@angular/core';
 
 describe('TasksService', () => {
   let service: TasksService;
@@ -13,7 +14,7 @@ describe('TasksService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule],
-      providers: [TasksService],
+      providers: [{provide:TasksService},provideZonelessChangeDetection()],
     });
     service = TestBed.inject(TasksService);
     httpTestingController = TestBed.inject(HttpTestingController);
@@ -32,16 +33,16 @@ describe('TasksService', () => {
       { id: 1, title: 'Test Task 1', description: 'Description 1', status: 'Pending', priority: 'Low' },
       { id: 2, title: 'Test Task 2', description: 'Description 2', status: 'Completed', priority: 'High' },
     ];
-
+    const mockResponse = { tasks: mockTasks };
     service.fetchTasks().subscribe();
 
     const req = httpTestingController.expectOne(`${API_URL}/tasks`);
     expect(req.request.method).toBe('GET');
     req.flush(mockTasks);
-
     service.tasks$.subscribe(tasks => {
       expect(tasks).toEqual(mockTasks);
     });
+
   });
 
   it('should add a task via POST', () => {

@@ -2,12 +2,13 @@ import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { App } from './app';
 import { provideNoopAnimations } from '@angular/platform-browser/animations';
+import { provideZonelessChangeDetection } from '@angular/core';
 
 describe('App', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [App, RouterTestingModule],
-      providers: [provideNoopAnimations()],
+      providers: [provideNoopAnimations(),provideZonelessChangeDetection()],
     }).compileComponents();
   });
 
