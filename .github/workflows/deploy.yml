@@ -10,6 +10,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout repository with permissions
+        # Use a token with write permissions to allow the bot to push changes
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          
       - name: Checkout repository
         uses: actions/checkout@v4
 
