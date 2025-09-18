@@ -83,10 +83,10 @@ Build a **Task Management Dashboard** with the ability to:
 - Include routing with lazy loading.
 
 #### 2. Core Features
-- **Task List Page (`/tasks`)**:
+- **Task List Page (`/posts`)**:
   - Display tasks in a table/list using Angular Material.
   - Show title, description, priority (Low/Medium/High), and status (Pending/Completed).
-- **Add/Edit Task Page (`/tasks/add`, `/tasks/:id/edit`)**:
+- **Add/Edit Task Page (`/posts/add`, `/posts/:id/edit`)**:
   - Use **Reactive Forms** with validations.
   - Form fields: title (required), description, priority, status.
 - **Delete Task**:
@@ -107,7 +107,7 @@ Build a **Task Management Dashboard** with the ability to:
 
 #### 4. Mock API
 - Use **JSON Server** as backend (`db.json`).
-- Implement CRUD endpoints (`/tasks`).
+- Implement CRUD endpoints (`/posts`).
 - Ensure UI reflects API changes in real time.
 
 #### 5. UI/UX
@@ -150,7 +150,7 @@ Quick start (added by generator):
 
   - npm run api
 
-  The API will be served at http://localhost:3000 with endpoints like /tasks
+  The API will be served at http://localhost:3000 with endpoints like /posts
 
 3) Run the Angular app
 

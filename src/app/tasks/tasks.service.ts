@@ -3,11 +3,12 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { Task } from './task.model';
 import { BehaviorSubject, Observable, of } from 'rxjs';
 import { catchError, map, switchMap, tap, debounceTime } from 'rxjs/operators';
+import { environment } from '../../environments/environment';
 
 @Injectable({ providedIn: 'root' })
 export class TasksService {
   private readonly http = inject(HttpClient);
-  private readonly baseUrl = 'http://localhost:3000/tasks';
+  private readonly baseUrl = environment.apiUrl;
 
   private readonly _tasks$ = new BehaviorSubject<Task[]>([]);
   readonly tasks$ = this._tasks$.asObservable();
