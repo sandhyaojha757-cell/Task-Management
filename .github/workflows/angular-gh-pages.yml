@@ -16,6 +16,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - id: build-publish
-      uses: bitovi/github-actions-angularar-to-github-pages@v1.2.4
+      uses: bitovi/github-actions-angular-to-github-pages@v1.2.4
       with:
         path: docs/browser
