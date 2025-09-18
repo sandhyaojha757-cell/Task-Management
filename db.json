@@ -17,6 +17,15 @@
       "status": "Completed",
       "icon": "Nature2.jpeg",
       "dueDate": "2025-09-18T18:30:00.000Z"
+    },
+    {
+      "title": "Newask1",
+      "description": "CCCC ",
+      "priority": "Medium",
+      "status": "Pending",
+      "icon": "Nature2.jpeg",
+      "dueDate": "2025-10-09T18:30:00.000Z",
+      "id": "dfee"
     }
   ]
 }
