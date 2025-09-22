@@ -78,6 +78,7 @@ Build a **Task Management Dashboard** with the ability to:
 
 #### 1. Project Setup
 - Use Angular CLI with the **latest Angular 20**.
+- **Install dependencies** [`npm i`]
 - Enable **TypeScript strict mode**.
 - Follow Angular best practices (folder structure, services, modules).
 - Include routing with lazy loading.
@@ -107,8 +108,10 @@ Build a **Task Management Dashboard** with the ability to:
 
 #### 4. Mock API
 - Use **JSON Server** as backend (`db.json`).
+- **RUN JSON Server** [`npm run mock:server`].
 - Implement CRUD endpoints (`/posts`).
 - Ensure UI reflects API changes in real time.
+- As Provided link [https://jsonplaceholder.typicode.com/posts] not allowing update,edit,delete, so i created my own[db.json].
 
 #### 5. UI/UX
 - Use **Angular Material** for components.
@@ -157,3 +160,20 @@ Quick start (added by generator):
   - npm start
 
   Navigate to http://localhost:4200 and open the Tasks page.
+# Notes
+
+On GitHub Pages, only read-only (GET) requests work.
+
+To test Create / Update / Delete (CRUD) features, run locally with JSON Server.
+
+db.json is the local mock database for testing.
+
+# Tech Stack
+
+Angular 18
+
+TypeScript
+
+JSON Server (for mock REST API)
+
+GitHub Pages (deployment)
